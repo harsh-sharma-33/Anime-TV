@@ -1,53 +1,52 @@
-import React from "react";
-import Header from "./headeer";
-import Card from "./card";
+import React from 'react'
+import Header from './headeer'
+import Card from './card.jsx'
+import axios from 'axios'
 
-const https = require("https");
-const base_url = "https://api.jikan.moe/v3/search/anime?q=";
+const https = require('https')
+const base_url = 'https://api.jikan.moe/v3/search/anime?q='
 
 function App() {
-  const [result, setResult] = React.useState([]);
+  const [animeList, setAnimeList] = React.useState([])
 
-  function searchElement(name) {
-    https.get(base_url + name, (res) => {
-      var body = "";
+  const searchElement = (name) => {
+    axios
+      .get(`https://api.jikan.moe/v3/search/anime?q=${name}`)
+      .then((response) => {
+        // console.log(response)
+        setAnimeList(response.data.results)
+      })
 
-      res.on("data", (data) => {
-        body += data;
-      });
-
-      res.on("end", () => {
-        var response = JSON.parse(body);
-        setResult(response.results);
-      });
-    });
+    console.log(animeList)
   }
 
 
-  // console.log(result);
-
-  result.map(e=>{
-    console.log(e.image_url)
-  })
-
   return (
     <div>
-      <Header Search={searchElement} />
+      <Header
+        Search={searchElement}
+      />
+
       <hr />
+
       <div className="section-2">
-        {result.map((e) => {
-          return(<Card
-            image={e.image_url}
-            title={e.title}
-            plot={e.synopsis}
-            rating={e.score}
-          />)
+        {animeList.map(anime => {
+          return (
+            <Card
+              image={anime.image_url}
+              title={anime.title}
+              plot={anime.synopsis}
+              rating={anime.rating}
+            />
+          )
         })}
-
-        {/* <Card /> */}
       </div>
-    </div>
-  );
-}
 
-export default App;
+    </div>
+
+
+
+  )
+
+}
+export default App

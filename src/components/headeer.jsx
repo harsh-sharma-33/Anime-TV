@@ -3,14 +3,14 @@ import img from "../bg.png"
 import Input from "./Search"
 
 
-const Header = (props) =>{
+const Header = (props) => {
 
-    console.log(img); 
-    return(
-        <div className = "header" style = {{backgroundImage: "url("+ img + ")"}}>
-           
-        <Input search = {props.Search} />
-           
+
+    return (
+        <div className="header" style={{ backgroundImage: "url(" + img + ")" }}>
+
+            <Input search={props.Search} />
+
         </div>
     )
 }
