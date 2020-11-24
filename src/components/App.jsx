@@ -15,6 +15,8 @@ function App() {
       .then((response) => {
         // console.log(response)
         setAnimeList(response.data.results)
+      }).catch(err => {
+        console.log(err)
       })
 
     console.log(animeList)
