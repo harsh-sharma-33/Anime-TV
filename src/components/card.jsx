@@ -1,17 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 // import img from "../naruto.jpg"
 
-const Card = ({ image, title, plot, rating }) => {
+const Card = ({ image, title, plot, rating, id }) => {
+
 
   return (
     <div className='card'>
-      <img src={image} />
+      <img src={image} alt={title} />
       <div className='info'>
         <div className='wrapper'>
           <h2 className='title'>{title}</h2>
           <h3 className='rating'>Rating {rating}</h3>
           <p className='plot'>{plot}</p>
-          <button className='watch-btn'>watch now</button>
+          <Link to={`/about/${id}`}>
+            <button className='watch-btn'>read more</button>
+          </Link>
         </div>
       </div>
     </div>

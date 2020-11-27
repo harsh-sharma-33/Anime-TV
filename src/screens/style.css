@@ -1,0 +1,352 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@300;400&display=swap');
+
+
+/* HOME SCREEN (LANDING PAGE CSS STARTS HERE) */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: red;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.header {
+    min-height: 45vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+input {
+    background-color: #f4f4f4;
+    width: 500px;
+    height: 40px;
+    padding: 5px;
+    align-items: center;
+    border: solid 3px red;
+    border-right: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+input::placeholder {
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#search-btn {
+    height: 55px;
+    border: 3px solid red;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: red;
+  
+    color: #fff;
+    padding: 15px;
+    font-size: 1rem;
+    transition: 400ms;
+}
+
+#search-btn:hover{
+    background-color: #a20a0a;
+    opacity: 100%;
+}
+
+
+.home-hr{
+    height: 10px;
+    border: none;
+    background-color: #222222;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+/* SECTION 2 (CARD) STARTS HERE */
+
+.section-2{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-between;
+    max-width: 100%;
+    min-height: 55vh;
+    background-color: #000000;
+}
+
+.card{
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.card>img{
+    display: inline-block;
+    border: 2px solid red;
+    width: auto;
+    height: 100%;
+    max-width: 245px;
+
+}
+
+.info{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+   color: #fff; 
+   transition: .5s ease;
+   background-color: #000000ab;
+   display: flex;
+   align-items: center;
+   justify-items: center;  
+}
+
+.card:hover .info{
+    opacity: 1;
+} 
+
+.title{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 3px;
+    padding: 10px;
+    
+}
+
+.plot{
+    padding: 10px 20px 20px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150; 
+}
+
+.watch-btn{
+    border: 2px solid red;
+    width: 120px;
+    height: 30px;
+    background-color: #000000;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    transition: .4s;
+    
+
+}
+
+.watch-btn:hover{
+    background-color: red;
+}
+
+.rating>span{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.rating{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 3px;
+    font-weight: 300;
+}
+
+/* 
+HOME SCREEN CSS ENDS HERE */
+
+
+
+/* ABOUT ANIME CSS STRATS HERE */
+
+
+.nav{
+    display:flex;
+    position: absolute;
+    min-height: 12vh;
+    min-width: 100vw;
+    align-items: center;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.87);
+    /* background-color: #000; */
+    z-index: 12;
+}
+.nav-input{
+    /* justify-self: flex-end; */
+    margin: 0 0 0 auto;
+    height: 20px;
+    width: 250px;
+    border: 3px 0 3px 3px solid red;
+    
+}
+.nav-search{
+    text-transform: uppercase;
+    height: 35px;
+    margin-right: 30px;
+    border: red 3px solid;
+    padding : 5px;
+    background: red;
+    transition: .3s;
+    color: #fff;
+    font-weight: 500;
+    
+}
+
+.nav-search:hover{
+    background:  #a20a0a;
+}
+
+
+.bg-img{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(15px); */
+        
+}
+
+.info-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    
+}
+
+
+.logo{
+    color : white;
+    font-family: 'Oswald', sans-serif;
+    padding:0 5%;
+}
+
+.logo>span{
+    color : red;
+}
+
+.front{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+
+.image-about{
+    margin: 120px 60px;
+    min-height: 70vh;
+    position: relative;
+    /* min-height: 350px; */
+    border: 1px solid black;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5),
+    -5px -5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 12;
+    /* top: 0; */
+}
+
+.studio{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1em;
+    margin-top: 125px;
+    color: white;
+    opacity: 85%;
+}
+
+.title-about{
+    color: white;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    /* margin-top: 30px; */
+    
+    font-size: 3rem;
+    
+}
+
+.anime-score{
+    margin-top: 15px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #ffe05d;
+    display: inline-block;
+}
+
+.genres{
+    color: #fff;
+    /* margin-left: 30px; */
+    opacity: .8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.synopsis{
+    margin: 30px 50px 30px 0;
+    line-height: 1.5rem;
+    font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+    color: #fff;
+    opacity: .6;
+    /* letter-spacing: 1px; */
+
+}
+
+.about-btn-watch{
+    height: 40px;
+    width: 110px;
+    margin: 10px 10px 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: black;
+    border: 2px solid red;
+    font-weight: 600;
+    transition: .3s;
+
+}
+
+
+.about-btn-watch:hover{
+    background-color: red;
+}
+
+.about-btn-add{
+    height: 40px;
+    margin: 10px 10px 10px 10px;
+    /* color: #fff; */
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 150px;
+    background: white;
+    opacity: .7;
+    transition: .3s;
+    border: 2px solid black;
+    backdrop-filter: blur(15px);
+}
+
+.about-btn-add:hover{
+    opacity: 1;
+}
