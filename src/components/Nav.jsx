@@ -2,17 +2,12 @@ import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
-    // const [click, setClick] = useState(false)
     const [query, setQuery] = useState("")
 
     const handleChange = (event) => {
         const requiredValue = event.target.value
         setQuery(requiredValue)
     }
-
-
-
-
 
     return (
         <div className="nav">

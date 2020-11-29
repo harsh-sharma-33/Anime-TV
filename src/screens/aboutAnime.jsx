@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Nav from '../components/Nav'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+
 
 const AboutAnime = ({ match }) => {
+
+    const history = useHistory()
 
     const [ani, setAni] = useState({})
     useEffect(() => {
@@ -14,8 +17,6 @@ const AboutAnime = ({ match }) => {
                 console.log(err)
             })
     }, [])
-
-    console.log(ani)
 
 
     return (
@@ -33,9 +34,9 @@ const AboutAnime = ({ match }) => {
             <div className="front">
 
                 <div className="left-2">
-                    <Link to='/'>
-                        <button className='goback'>Go back</button>
-                    </Link>
+
+                    <button onClick={() => { history.goBack() }} className='goback'>Go back</button>
+
                     <img className='image-about' src={ani.image_url} alt={ani.title} />
                 </div>
                 <div className="front-info">

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 // import img from "../naruto.jpg"
 
-const Card = ({ image, title, plot, rating, id, searchedQuery }) => {
+const Card = ({ image, title, plot, rating, id }) => {
 
-
+  // console.log(previousPath)
   return (
     <div className='card'>
       <img src={image} alt={title} />
