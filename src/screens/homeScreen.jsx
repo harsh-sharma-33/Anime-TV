@@ -4,7 +4,7 @@ import Card from '../components/card'
 import axios from 'axios'
 import './style.css'
 
-const HomeScreen = () => {
+const HomeScreen = (match) => {
 
     const [animeList, setAnimeList] = React.useState([])
 

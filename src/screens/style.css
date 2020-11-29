@@ -248,9 +248,8 @@ HOME SCREEN CSS ENDS HERE */
     position: absolute;
     min-height: 100vh;
     min-width: 100vw;
-    top: 0;
+    top: 15px;
     display: flex;
-    /* justify-content: space-between; */
 
 }
 
@@ -311,8 +310,6 @@ HOME SCREEN CSS ENDS HERE */
     font-size: 13px;
     color: #fff;
     opacity: .6;
-    /* letter-spacing: 1px; */
-
 }
 
 .about-btn-watch{
@@ -350,3 +347,20 @@ HOME SCREEN CSS ENDS HERE */
 .about-btn-add:hover{
     opacity: 1;
 }
+
+
+.goback{
+    margin: 80px 0px 0 60px;
+    position: absolute;
+    height: 30px;
+    width: 80px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid red;
+    color: white;
+    transition: .3s;
+}
+.goback:hover{
+    background-color: black;
+} 
+

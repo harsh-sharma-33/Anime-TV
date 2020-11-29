@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 // import img from "../naruto.jpg"
 
-const Card = ({ image, title, plot, rating, id }) => {
+const Card = ({ image, title, plot, rating, id, searchedQuery }) => {
 
 
   return (
