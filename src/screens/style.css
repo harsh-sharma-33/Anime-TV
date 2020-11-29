@@ -364,3 +364,27 @@ HOME SCREEN CSS ENDS HERE */
     background-color: black;
 } 
 
+.search-result-wrap{
+    background-color: #000;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.search-result{
+    margin-top: 70px;
+    padding: 30px 70px 30px 70px;
+}
+
+.search-result > h1{
+    color: #fff;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+}
+
+.grid-card{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
