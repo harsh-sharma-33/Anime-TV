@@ -355,13 +355,13 @@ HOME SCREEN CSS ENDS HERE */
     height: 30px;
     width: 80px;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 1);
     border: 1px solid red;
     color: white;
     transition: .3s;
 }
 .goback:hover{
-    background-color: black;
+    background-color: red;
 } 
 
 .search-result-wrap{

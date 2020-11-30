@@ -12,7 +12,7 @@ const SearchResults = ({ match }) => {
         console.log(response.data.results)
 
         setAnime(data)
-    }, [])
+    }, [match.params.query])
 
     // console.log(anime)
 
